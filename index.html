@@ -6,31 +6,86 @@
     <title>nekorisuzu workspace.</title>
 
     <style>
-        body {
-            background: black;
-            color: white;
-            font-family: Arial, "Microsoft YaHei", sans-serif;
-            margin: 40px;
-        }
 
-        header,
-        main,
-        footer {
-            max-width: 900px;
-            margin: auto;
-        }
+body{
+    margin:0;
+    padding:20px;
 
-        h1,
-        h2 {
-            font-weight: normal;
-        }
+    background:#0000AA;         
+    color:#FFFFFF;
 
-        footer {
-            margin-top: 60px;
-            font-size: 0.9em;
-            color: #888;
-        }
-    </style>
+    font-family:"Perfect DOS VGA 437",
+                "PxPlus IBM VGA9",
+                "Courier New",
+                monospace;
+
+    line-height:1.6;
+}
+
+
+header,
+main,
+footer{
+    width:900px;
+    margin:auto;
+}
+
+
+h1,h2{
+    font-weight:normal;
+    margin:20px 0 10px;
+}
+
+
+a{
+    color:#FFFFFF;
+    text-decoration:none;
+
+    display:block;
+    padding:3px 8px;
+    width:fit-content;
+}
+
+
+a:hover{
+    background:#FFFFFF;
+    color:#0000AA;
+}
+
+
+a:active{
+    background:#AAAAAA;
+    color:#000000;
+}
+
+a:visited{
+    color:#FFFFFF;
+}
+
+
+footer{
+    margin-top:40px;
+
+    border-top:2px solid #FFFFFF;
+    padding-top:15px;
+}
+
+
+main a{
+    margin:6px 0;
+}
+
+main a::before{
+    content:"> ";
+}
+
+
+::selection{
+    background:#FFFFFF;
+    color:#0000AA;
+}
+</style>
+
 </head>
 
 <body>
@@ -42,11 +97,24 @@
     </header>
 
     <main>
+    <a href="originalalbum.html">
         <h2>Original Album</h2>
+    </a>
+    <a href="blog.html">
+        <h2>Blog</h2>
+    </a>
+    <a href="connect.html">
+        <h2>Connect</h2>
+    </a>
     </main>
 
     <footer>
         <p>&copy; 2022–2026 nekorisuzu. 蓝蓑笠群外</p>
+<p>
+    link:
+    <a href="https://hiirofox.github.io/">hiirofox</a>
+</p>
+                  
     </footer>
 
 </body>
