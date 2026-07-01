@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+<meta charset="UTF-8">
+<title>Goods & Support</title>
+
+<style>
+body{
+    background:#0000AA;
+    color:#FFFFFF;
+    margin:30px;
+    font-family:"Courier New",monospace;
+    line-height:1.6;
+}
+
+h2{
+    margin:0;
+    padding:6px 10px;
+    background:#FFFFFF;
+    color:#0000AA;
+    font-weight:normal;
+}
+
+.pattern1{
+    margin-top:20px;
+    padding:4px 10px;
+    background:#FFFFFF;
+    color:#0000AA;
+    border:2px solid #FFFFFF;
+}
+
+.pattern1 p{
+    margin:0;
+}
+
+.content{
+    border:2px solid #FFFFFF;
+    padding:15px;
+    margin-top:-2px;
+    background:#0000AA;
+}
+
+p{
+    margin:10px 0;
+}
+
+a{
+    color:#FFFFFF;
+    text-decoration:none;
+    display:inline-block;
+    padding:2px 4px;
+}
+
+a:hover{
+    background:#FFFFFF;
+    color:#0000AA;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Goods & Support</h2>
+
+<p>购买实体专辑，衍生品……等</p>
+
+<div class="pattern1">
+<p>网店</p>
+</div> 
+
+<div class="content">
+<p>闲鱼：AAA厦门铁壳闹碟贩子</p>
+</div>
+
+
+<div class="pattern1">
+<p>Support 要饿死了</p>
+</div>
+
+<div class="content">
+<p><a href="https://huajia.163.com/main/profile/grkaol7B">找我约曲子（也可以私聊B站和QQ2375273747，更方便！）</a></p>
+</div>
+<div class="content">
+<p>无偿捐助请联系我的B站！或者QQ：2375273747</p>
+</div>
+
+<div class="pattern1">
+<p>感谢</p>
+</div>
+
+<div class="content">
+<p>感谢支持我的所有人，无论是语言激励还是生活补助，都帮助着我继续活下去~</p>
+</div>
+
+</body>
+
+</html>
