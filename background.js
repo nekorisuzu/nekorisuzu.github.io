@@ -1,19 +1,9 @@
 let branches = [];
 
 function setup() {
-  let c = createCanvas(windowWidth, windowHeight);
-
-  // 关键：把 canvas 变成网页背景层
-  c.style('position', 'fixed');
-  c.style('top', '0');
-  c.style('left', '0');
-  c.style('z-index', '-1');
-  c.style('pointer-events', 'none');
-
-  // 关键：透明背景
-  clear();
-
-  stroke(0);
+  createCanvas(windowWidth, windowHeight);
+  stroke(255);
+  strokeWeight(1);
 
   for (let i = 0; i < 40; i++) {
     spawn(random(width), random(height));
@@ -21,13 +11,13 @@ function setup() {
 }
 
 function draw() {
-  // 关键：每帧透明清除，而不是白色覆盖
-  clear();
+  noStroke();
+  fill(0, 18);
+  rect(0, 0, width, height);
 
-  stroke(0);
+  stroke(255);
 
   for (let i = branches.length - 1; i >= 0; i--) {
-
     let b = branches[i];
 
     let x2 = b.x + cos(b.dir) * b.step;
@@ -39,7 +29,6 @@ function draw() {
     b.y = y2;
     b.life--;
 
-    // 随机转向
     if (random() < 0.35) {
       b.dir += random([
         HALF_PI,
@@ -51,7 +40,6 @@ function draw() {
       ]);
     }
 
-    // 分裂
     if (random() < 0.02 && branches.length < 120) {
       branches.push({
         x: b.x,
@@ -62,7 +50,6 @@ function draw() {
       });
     }
 
-    // 删除
     if (
       b.life < 0 ||
       b.x < -20 || b.x > width + 20 ||
@@ -79,8 +66,8 @@ function draw() {
 
 function spawn(x, y) {
   branches.push({
-    x: x,
-    y: y,
+    x,
+    y,
     dir: random(TWO_PI),
     step: random(6, 16),
     life: random(30, 100)
@@ -89,5 +76,4 @@ function spawn(x, y) {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  clear();
 }
