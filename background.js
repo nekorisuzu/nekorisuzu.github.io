@@ -1,7 +1,11 @@
 let branches = [];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style("display", "block");
+
+  background(0, 0, 170);
+
   stroke(255);
   strokeWeight(1);
 
@@ -12,7 +16,7 @@ function setup() {
 
 function draw() {
   noStroke();
-  fill(0, 18);
+  fill(0, 0, 170, 18);
   rect(0, 0, width, height);
 
   stroke(255);
