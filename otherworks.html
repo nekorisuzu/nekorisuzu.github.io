@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杂项</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:24px;
+
+    background:#000;
+    color:#00ff66;
+
+    font-family:"Courier New", monospace;
+    line-height:1.6;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    font-weight:normal;
+    text-shadow:0 0 6px rgba(0,255,100,0.35);
+}
+
+.panel{
+    border:1px solid #00ff66;
+    padding:14px;
+    margin-top:20px;
+
+    background:rgba(0,30,15,0.25);
+    box-shadow:0 0 10px rgba(0,255,100,0.12);
+}
+
+/* 第一层 */
+.node{
+    cursor:pointer;
+    padding:4px 6px;
+    margin:6px 0;
+
+    border-left:2px solid #00ff66;
+    user-select:none;
+}
+
+.node:hover{
+    background:rgba(0,255,100,0.08);
+}
+
+/* 第二层 */
+.children{
+    margin-left:18px;
+    display:none;
+
+    border-left:1px dashed #00ff66;
+    padding-left:10px;
+}
+
+.children.show{
+    display:block;
+}
+
+/* 第三层节点 */
+.item{
+    cursor:pointer;
+    padding:3px 6px;
+    margin:4px 0;
+
+    border-left:1px solid #00aa44;
+    user-select:none;
+}
+
+.item:hover{
+    background:rgba(0,255,100,0.06);
+}
+
+/* 第三层容器 */
+.subchildren{
+    margin-left:18px;
+    display:none;
+
+    border-left:1px dashed #00aa44;
+    padding-left:10px;
+}
+
+.subchildren.show{
+    display:block;
+}
+
+.back a{
+    color:#00ff66;
+    text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>OTHER WORKS / SYSTEM TREE</h1>
+
+<div class="panel">
+
+    <!-- ================= rhythmgame ================= -->
+    <div class="node" onclick="toggle('r1')">
+        ▶ rhythmgame
+    </div>
+
+    <div class="children" id="r1">
+
+        <div class="item" onclick="toggle('r1a')">
+            ▶ BMS/BOF
+        </div>
+
+        <div class="subchildren" id="r1a">
+            <div class="item">BOF:ET WHITE TOARD</div>
+            <div class="item">BOF:NT You Are Nothing Without Your Dream</div>
+            <div class="item">BOF:TT 势</div>
+            <div class="item">BOF21 SAYOne nAIR aosiete</div>
+        </div>
+
+        <div class="item" onclick="toggle('r1b')">
+            ▶ etc
+        </div>
+
+        <div class="subchildren" id="r1b">
+            <div class="item">Dancerail3 You Are Nothing Without Your Dream</div>
+        </div>
+
+    </div>
+
+   <!-- ================= circle ================= -->
+<div class="node" onclick="toggle('r2')">
+    ▶ own circle & project
+</div>
+
+<div class="children" id="r2">
+
+    <div class="item" onclick="toggle('r2a')">
+        ▶ figkura
+    </div>
+
+    <div class="subchildren" id="r2a">
+        <div class="item">PHASE-Z</div>
+    </div>
+
+    <div class="item">
+        ▶ suotopia作坊
+    </div>
+
+    <div class="item">
+        ▶ 独辩公社
+    </div>
+
+      <div class="item">
+        ▶ 思共谈伴idst
+    </div>
+
+</div>
+
+    <!-- ================= featuring ================= -->
+    <div class="node" onclick="toggle('r3')">
+        ▶ featuring & part in
+    </div>
+
+    <div class="children" id="r3">
+        <div class="item">ACGN二次创作</div>
+        <div class="item">原创</div>
+    </div>
+
+    <!-- ================= files ================= -->
+    <div class="node" onclick="toggle('r4')">
+        ▶ files / 未归类
+    </div>
+
+    <div class="children" id="r4">
+        <div class="item">nothing here</div>
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="index.html">← return home</a>
+</div>
+
+</div>
+
+<script>
+function toggle(id){
+    document.getElementById(id).classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
