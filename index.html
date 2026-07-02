@@ -25,7 +25,6 @@ body{
     line-height:1.6;
 }
 
-
 header,
 main,
 footer{
@@ -33,12 +32,10 @@ footer{
     margin:auto;
 }
 
-
 h1,h2{
     font-weight:normal;
     margin:20px 0 10px;
 }
-
 
 a{
     color:#FFFFFF;
@@ -49,12 +46,10 @@ a{
     width:fit-content;
 }
 
-
 a:hover{
     background:#FFFFFF;
     color:#0000AA;
 }
-
 
 a:active{
     background:#AAAAAA;
@@ -65,15 +60,6 @@ a:visited{
     color:#FFFFFF;
 }
 
-
-footer{
-    margin-top:40px;
-
-    border-top:2px solid #FFFFFF;
-    padding-top:15px;
-}
-
-
 main a{
     margin:6px 0;
 }
@@ -82,32 +68,71 @@ main a::before{
     content:"> ";
 }
 
-
 ::selection{
     background:#FFFFFF;
     color:#0000AA;
 }
 
-        .motto{
-            color:white;
-            background:black;
-      width: fit-content;}
-</style>
+.motto{
+    color:white;
+    background:black;
+    width: fit-content;
+}
+
+/* footer布局 */
+footer{
+    margin-top:40px;
+    border-top:2px solid #FFFFFF;
+    padding-top:15px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* 左侧 */
+.footer-left p{
+    margin:4px 0;
+}
+
+/* 右侧按钮 */
+.other-btn{
+    color:#fff;
+    text-decoration:none;
+
+    padding:4px 10px;
+    border:1px solid #fff;
+
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    white-space: nowrap;
+}
+
+.other-btn:hover{
+    background:#fff;
+    color:#000;
+}
+
+    </style>
 
 </head>
+
 <script src="background.js"></script>
+
 <body>
 
-    <header>
-        <h1>About 蓝蓑笠群外。</h1>
+<header>
+    <h1>About 蓝蓑笠群外。</h1>
 
-        <div class="motto">愿意在天灾人祸中为尘埃买一份保险吗？</div>
-        <p>独立创作者。Major in DTM, producing technopop music, electronic music, and synthesizer music.</p>
-        <p>a.k.a. miyAIR (illustrator), Zhelota (photography), 废萌诗人 (literature), nyet11 (doujin music), and more.</p>
-          <p>主催：suotopia作坊/独辩公社</p>
-    </header>
+    <div class="motto">愿意在天灾人祸中为尘埃买一份保险吗？</div>
+    <p>独立创作者。Major in DTM, producing technopop music, electronic music, and synthesizer music.</p>
+    <p>a.k.a. miyAIR (illustrator), Zhelota (photography), 废萌诗人 (literature), nyet11 (doujin music), and more.</p>
+    <p>主催：suotopia作坊/独辩公社</p>
+</header>
 
-    <main>
+<main>
     <a href="originalalbum.html">
         <h2>Original Album</h2>
     </a>
@@ -120,22 +145,23 @@ main a::before{
     <a href="connect.html">
         <h2>Connect</h2>
     </a>
+</main>
 
+<footer>
 
-    </main>
-
-    <footer>
+    <div class="footer-left">
         <p>&copy; 2022–2026 nekorisuzu. 蓝蓑笠群外</p>
-<p>
-    link:
-    <a href="https://hiirofox.github.io/">hiirofox</a>
-</p>
-                  
-    </footer>
+        <p>
+            link:
+            <a href="https://hiirofox.github.io/">hiirofox</a>
+        </p>
+    </div>
+
+    <a class="other-btn" href="otherworks.html">
+        Other Works / 杂项
+    </a>
+
+</footer>
 
 </body>
-  
-
-
-    
 </html>
