@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>taitle.</title>
+
 <style>
 
 *{
@@ -18,9 +20,11 @@ body{
     overflow:hidden;
 }
 
+/* 胎动背景 */
+
 .blob{
     position:absolute;
-    border:1px solid rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.12);
     filter:blur(1px);
     animation:morph linear infinite alternate;
 }
@@ -36,91 +40,43 @@ body{
 .b2{
     width:260px;
     height:260px;
-    right:10%;
-    top:20%;
-    animation-duration:26s;
+    right:8%;
+    top:18%;
+    animation-duration:28s;
 }
 
 .b3{
-    width:340px;
-    height:340px;
-    left:45%;
+    width:320px;
+    height:320px;
+    left:48%;
     bottom:-80px;
     animation-duration:40s;
-}
-
-.b4{
-    width:180px;
-    height:180px;
-    right:30%;
-    bottom:20%;
-    animation-duration:24s;
 }
 
 @keyframes morph{
 
 0%{
-transform:
-translate(0,0)
-rotate(0deg)
-scale(.9);
-
-border-radius:
-42% 58% 63% 37% /
-40% 45% 55% 60%;
-}
-
-25%{
-transform:
-translate(30px,-20px)
-rotate(45deg)
-scale(1.1);
-
-border-radius:
-60% 40% 55% 45% /
-55% 35% 65% 45%;
+transform:translate(0,0) rotate(0deg) scale(.9);
+border-radius:42% 58% 63% 37% / 40% 45% 55% 60%;
 }
 
 50%{
-transform:
-translate(-20px,30px)
-rotate(120deg)
-scale(.95);
-
-border-radius:
-35% 65% 40% 60% /
-60% 45% 55% 40%;
-}
-
-75%{
-transform:
-translate(40px,15px)
-rotate(210deg)
-scale(1.05);
-
-border-radius:
-70% 30% 55% 45% /
-35% 65% 40% 60%;
+transform:translate(30px,-20px) rotate(160deg) scale(1.08);
+border-radius:65% 35% 40% 60% / 55% 35% 65% 45%;
 }
 
 100%{
-transform:
-translate(-15px,-30px)
-rotate(360deg)
-scale(.9);
-
-border-radius:
-45% 55% 35% 65% /
-65% 40% 60% 35%;
+transform:translate(-20px,25px) rotate(360deg) scale(.92);
+border-radius:35% 65% 55% 45% / 65% 40% 60% 35%;
 }
 
 }
 
+/* 扫描线 */
 
 body::after{
 
 content:"";
-
 position:fixed;
 left:0;
 top:0;
@@ -129,36 +85,80 @@ bottom:0;
 
 background:
 repeating-linear-gradient(
-
 transparent,
 transparent 3px,
 rgba(255,255,255,.02) 4px
-
 );
 
 pointer-events:none;
 
 }
 
+/* 中央窗口 */
+
 main{
 
 position:absolute;
-
 left:50%;
 top:50%;
-
 transform:translate(-50%,-50%);
 
-width:700px;
-max-width:85%;
+width:760px;
+max-width:90%;
 
-border:1px solid rgba(255,255,255,.4);
+padding:36px;
 
-padding:40px;
+border:1px solid rgba(255,255,255,.35);
 
-background:rgba(0,0,0,.75);
+background:rgba(0,0,0,.72);
 
-backdrop-filter:blur(3px);
+backdrop-filter:blur(4px);
+
+z-index:10;
+
+}
+
+/* 横幅 */
+
+.banner{
+
+display:block;
+
+width:100%;
+
+max-height:180px;
+
+object-fit:contain;
+
+margin-bottom:28px;
+
+animation:bannerFloat 10s ease-in-out infinite;
+
+}
+
+/* 标题 */
+
+.titlebox{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+margin-bottom:10px;
+
+}
+
+.logo{
+
+width:72px;
+
+height:72px;
+
+object-fit:contain;
+
+animation:logoFloat 6s ease-in-out infinite;
 
 }
 
@@ -166,7 +166,6 @@ h1{
 
 font-size:40px;
 font-weight:normal;
-margin-bottom:10px;
 
 }
 
@@ -179,9 +178,31 @@ animation:blink .9s steps(1) infinite;
 @keyframes blink{
 
 50%{
-
 opacity:0;
+}
 
+}
+
+@keyframes bannerFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-5px);
+}
+
+}
+
+@keyframes logoFloat{
+
+0%,100%{
+transform:translateY(0) rotate(-2deg);
+}
+
+50%{
+transform:translateY(-6px) rotate(2deg);
 }
 
 }
@@ -205,21 +226,7 @@ margin-bottom:8px;
 p{
 
 line-height:1.8;
-
 color:#ddd;
-
-}
-
-a{
-
-color:#fff;
-text-decoration:none;
-
-}
-
-a:hover{
-
-opacity:.6;
 
 }
 
@@ -232,21 +239,33 @@ opacity:.6;
 <div class="blob b1"></div>
 <div class="blob b2"></div>
 <div class="blob b3"></div>
-<div class="blob b4"></div>
 
 <main>
 
+<img src="1231.png" class="banner">
+
+<div class="titlebox">
+
+<img src="1232.png" class="logo">
+
+<div>
+
 <h1>胎动<span class="cursor">_</span></h1>
 
-G2E.
+<p>G2E.</p>
+
+</div>
+
+</div>
 
 <hr>
 
 <h2>beinersonase</h2>
 
 <p>redi for pus.wor</p>
+
 <p>
-Chines.e.
+Chines.e.<br>
 We arE.
 </p>
 
@@ -255,11 +274,11 @@ We arE.
 <h2>rang.</h2>
 
 <p>
-xeninsect——自然法意义代表<br>
-蓝蓑笠群外——你爹<br>
-Yusasi——卖不出花<br>
-GM_Shadows——bms化。苦难的助手<br>
-NancyArchime——绘图软体
+xeninsect —— 自然法意义代表<br>
+蓝蓑笠群外 —— 你爹<br>
+Yusasi —— 卖不出花<br>
+GM_Shadows —— bms化。苦难的助手<br>
+NancyArchime —— 绘图软体
 </p>
 
 <hr>
@@ -267,12 +286,10 @@ NancyArchime——绘图软体
 <h2>进度</h2>
 
 <p>
-Track 01 没有<br>
-Track 02 不说<br>
-Track 03 naidesu
+Track 01　没有<br>
+Track 02　不说<br>
+Track 03　naidesu
 </p>
-
-<hr>
 
 </main>
 
