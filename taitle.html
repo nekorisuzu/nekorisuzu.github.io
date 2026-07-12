@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>taitle.</title>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:"MS UI Gothic",monospace;
+    overflow:hidden;
+}
+
+.blob{
+    position:absolute;
+    border:1px solid rgba(255,255,255,.15);
+    filter:blur(1px);
+    animation:morph linear infinite alternate;
+}
+
+.b1{
+    width:420px;
+    height:420px;
+    left:5%;
+    top:8%;
+    animation-duration:32s;
+}
+
+.b2{
+    width:260px;
+    height:260px;
+    right:10%;
+    top:20%;
+    animation-duration:26s;
+}
+
+.b3{
+    width:340px;
+    height:340px;
+    left:45%;
+    bottom:-80px;
+    animation-duration:40s;
+}
+
+.b4{
+    width:180px;
+    height:180px;
+    right:30%;
+    bottom:20%;
+    animation-duration:24s;
+}
+
+@keyframes morph{
+
+0%{
+transform:
+translate(0,0)
+rotate(0deg)
+scale(.9);
+
+border-radius:
+42% 58% 63% 37% /
+40% 45% 55% 60%;
+}
+
+25%{
+transform:
+translate(30px,-20px)
+rotate(45deg)
+scale(1.1);
+
+border-radius:
+60% 40% 55% 45% /
+55% 35% 65% 45%;
+}
+
+50%{
+transform:
+translate(-20px,30px)
+rotate(120deg)
+scale(.95);
+
+border-radius:
+35% 65% 40% 60% /
+60% 45% 55% 40%;
+}
+
+75%{
+transform:
+translate(40px,15px)
+rotate(210deg)
+scale(1.05);
+
+border-radius:
+70% 30% 55% 45% /
+35% 65% 40% 60%;
+}
+
+100%{
+transform:
+translate(-15px,-30px)
+rotate(360deg)
+scale(.9);
+
+border-radius:
+45% 55% 35% 65% /
+65% 40% 60% 35%;
+}
+
+}
+
+
+body::after{
+
+content:"";
+
+position:fixed;
+left:0;
+top:0;
+right:0;
+bottom:0;
+
+background:
+repeating-linear-gradient(
+
+transparent,
+transparent 3px,
+rgba(255,255,255,.02) 4px
+
+);
+
+pointer-events:none;
+
+}
+
+main{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:700px;
+max-width:85%;
+
+border:1px solid rgba(255,255,255,.4);
+
+padding:40px;
+
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(3px);
+
+}
+
+h1{
+
+font-size:40px;
+font-weight:normal;
+margin-bottom:10px;
+
+}
+
+.cursor{
+
+animation:blink .9s steps(1) infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+hr{
+
+border:none;
+border-top:1px solid #555;
+margin:18px 0;
+
+}
+
+h2{
+
+font-size:16px;
+font-weight:normal;
+margin-bottom:8px;
+
+}
+
+p{
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+a{
+
+color:#fff;
+text-decoration:none;
+
+}
+
+a:hover{
+
+opacity:.6;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+<div class="blob b4"></div>
+
+<main>
+
+<h1>胎动<span class="cursor">_</span></h1>
+
+G2E.
+
+<hr>
+
+<h2>beinersonase</h2>
+
+<p>redi for pus.wor</p>
+<p>
+Chines.e.
+We arE.
+</p>
+
+<hr>
+
+<h2>rang.</h2>
+
+<p>
+xeninsect——自然法意义代表<br>
+蓝蓑笠群外——你爹<br>
+Yusasi——卖不出花<br>
+GM_Shadows——bms化。苦难的助手<br>
+NancyArchime——绘图软体
+</p>
+
+<hr>
+
+<h2>进度</h2>
+
+<p>
+Track 01 没有<br>
+Track 02 不说<br>
+Track 03 naidesu
+</p>
+
+<hr>
+
+</main>
+
+</body>
+</html>
