@@ -6,10 +6,12 @@
   </span></p>
 </div>
 
+<div class="dots"></div>
+
 <div class="profile">
-  <p>Buongimena: goodmornoonight：早中晚好——美凪</p>
+  <p style="background-color:rgba(0, 35, 125, 0.7) ">Buongimena: goodmornoonight：早中晚好——美凪</p>
   <p>燕子：燕子在夜晚的树梢上向着月亮，想要捕获月亮。</p>
-  <p>南燕，作为mo2的女主角。对于：自焚 新生 自由 的意象</p>
+  <p style="background-color:rgba(0, 35, 125, 0.7)">南燕，作为mo2的女主角。对于：自焚 新生 自由 的意象</p>
   <p>费里尼，大路，八部半。特吕弗，四百击。寺山修司。</p>
 </div>
 
@@ -23,6 +25,18 @@
 @import url("https://fontsapi.zeoseven.com/881/main/result.css");  
 @import url("https://fontsapi.zeoseven.com/2376/main/result.css");
 
+.dots {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle, rgba(0,22,0,0.1) 9px, transparent 24px),
+        radial-gradient(circle, rgba(255,0,0,0.9) 9px, transparent 0px);
+    background-size: 70px 70px, 70px 70px;
+    background-position: 0 0, 35px 35px; 
+    pointer-events: none;
+    z-index: -1;
+}
+  
 * {
     box-sizing: border-box;
 }
@@ -32,29 +46,30 @@ body {
     min-height: 100vh;
     padding: 12vh 10vw;
     background:linear-gradient(
-    to bottom,
-    #ffffff 9%,
-    #BCCCFF);
+   to bottom,
+    #ffffff 0%,
+    #fff5f5 40%,
+    #ffcccc 75%,
+    #cc0000 100%);
     color: #211b19;
     font-family: "Noto Serif SC", serif;
   
 }
 
 .title {
-
-    text-shadow: 2px 2px 3px #000000;
+    color:rgba(233,244,244,0.6);
+    text-shadow: 1px 12px 1px #000000;
     max-width: 720px;
     margin: 0 0 0 0;
     padding: 12px;
     background:linear-gradient(
-      to bottom,#ffffff 9%,
-    #BCCCFF);
-    border: 11px solid;
+      to bottom,rgba(255,255,255,0.4) 9%,
+    rgba(188, 204, 255,0.3));
+    border: 1px solid;
     border-image: linear-gradient(
   to right,
-  #ffffff 7%,
-  #BCCCFF
-) 1;
+  rgba(255,255,255,0.4) 9%,
+rgba(188, 204, 255,0.5)) 1;
     margin-bottom:7px;
   
 }
@@ -73,7 +88,6 @@ body {
     font-size: 17px;
     font-style: italic;
     letter-spacing: .08em;
-    color: #ffffff;
     margin: 0;
     margin-bottom:1;
 }
@@ -86,8 +100,9 @@ body {
     font-weight: normal;}
 .profile {
     font-family: "Jigmo";
+    color: 	white;
     font-weight: normal;
-    max-width: 500px;
+    max-width: 800px;
     margin: 0 0 0 0;
     font-size: 15px;
     line-height: 0.2;
@@ -103,13 +118,22 @@ body {
   
 }
 
+  .profile p:nth-child(2) {
+    font-family: "Jigmo";
+    font-weight: normal;
+    padding-top:20px;
+    letter-spacing: 15px;
+    height:40px;
+    padding-left: 4%;
+    color:#0066CC;
+    background:rgba(222,222,222,0.7);
+}
 .profile p:last-child {
     font-family: "Jigmo";
     font-weight: normal;
-    margin-top: 10px;
-    color: #000000;
-
-
+    padding-left: 45%;
+    color:#white;
+    background:rgba(1,1,1,0.9);
 }
 
 ::selection {
@@ -140,6 +164,7 @@ body {
     color: #666;
     letter-spacing: .05em;
     pointer-events: none; 
+    color:white;
 }
   
 </style>
