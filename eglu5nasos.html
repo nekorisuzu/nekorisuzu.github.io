@@ -6,7 +6,12 @@
   </span></p>
 </div>
 <div class="moon"></div>
+<div class="moon2"></div>
+<div class="moon3"></div>
 <div class="dots"></div>
+<div class="tedun">
+  <h1>月海</h1>
+</div>
 
 <div class="profile">
   <p style="background-color:rgba(0, 35, 125, 0.7) ">Buongimena: goodmornoonight：早中晚好——美凪</p>
@@ -16,6 +21,46 @@
 
 
 </div>
+
+<div class="tsma">
+  <div class="tsmatitle">
+台本一
+  </div>
+</div>
+
+
+<div id="tetes">HUMAN</div>
+
+
+<script>
+const texts = [
+  "HUMAN\nHUMAN",
+  "LIMITED\nAntigone",
+  "ERROR 1/4",
+  "EGO",
+  "ERROR 2/4",
+  "ERROR 3/4",
+  "ERROR 4/4",
+  "HUMAN\nHUMAN",
+  "ANALOG\nAnarchy\nLOGOS",
+  "EGO",
+  "ALTER/EGO\nredo",
+  "ALTER/EGO\nredo\nredo",
+  "ALTER/EGO\nredo\nredo\nredo",
+  "ERROR 4/4",
+  "ALTER/EGO\nredo\nredo\nredo\nredo"
+];
+
+let index = 0;
+
+setInterval(() => {
+  document.getElementById("tetes").textContent = texts[index];
+
+  index = (index + 1) % texts.length;
+}, 100);
+</script>
+
+<div class="checkerboard"></div>
 
 <div class="copyright">
   “月海”两字所使用的字体为USMCChuibolishu，尽管这是一个CC0字体。
@@ -29,12 +74,13 @@
 
 .dots {
     position: fixed;
+    width:20vh;
     inset: 0;
     background:
-        radial-gradient(circle, rgba(0,22,0,0.1) 9px, transparent 24px),
-        radial-gradient(circle, rgba(255,0,0,0.9) 9px, transparent 0px);
-    background-size: 70px 70px, 70px 70px;
-    background-position: 0 0, 35px 35px; 
+        radial-gradient(circle, rgba(0,22,0,0.3) 9px, transparent 24px),
+        radial-gradient(circle, rgba(255,0,0,1) 20px, transparent 1px);
+    background-size: 70px 70px, 140px 80px;
+    background-position: 0 0, 3px 333px; 
     pointer-events: none;
     z-index: -2;
 }
@@ -54,6 +100,7 @@ body {
     #fff5f5 40%,
     #ffcccc 75%,
     #cc0000 100%);
+      background-attachment: fixed;
     color: #211b19;
     font-family: "Noto Serif SC", serif;
   
@@ -152,6 +199,43 @@ rgba(188, 204, 255,0.88)) 1;
         font-size: 14px;
     }
 }
+
+
+.tsma{
+  position:relative;
+  left:10px;
+  top:50px;
+  border-left:black solid 1px;
+  padding-left:15px;
+ background:linear-gradient(
+   to left,
+    rgba(255,255,255,0) 0%,
+    #fff5f5 40%,
+    #ffcccc 45%,
+    rgb(100,145,000) 100%);
+  width:70vh;
+  min-height:60vh;
+}
+
+.tsmatitle{
+  position:absolute;
+  left:10px;
+  margin-top:10px;
+  background:rgba(233,222,200,0.8);
+  width:auto;
+  height:7%;
+  padding-bottom:10px;
+  color:black;
+  font-size:3vh;
+ font-family: "Jigmo";
+ border-bottom:black solid 4px;
+  border-left:gray solid 4px;
+  border-top:white solid 4px;
+   border-right:gray solid 4px;
+}
+
+
+
   
   .copyright{
     max-width:90%;
@@ -185,4 +269,164 @@ rgba(188, 204, 255,0.88)) 1;
         transform: translateY(-50%) rotate(360deg);
     }
 }
+
+
+.moon2 {
+    position: fixed;
+    right: 20vh;             
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 400px;
+    border-radius: 47%;
+    background: radial-gradient(circle at 12% 35%, #000000 24%, rgba(124,34,230,0.3));
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    z-index: -1;
+    animation: moon-spin 4s reverse infinite;
+}
+
+@keyframes moon-spin {
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+
+.moon3 {
+    position: fixed;
+    right: 40vh;             
+    top: 50%;
+    transform: translateY(-49%);
+    width: 300px;
+    height: 300px;
+    border-radius: 49%;
+    background: radial-gradient(circle at 35% 35%, #ffffff 0%, rgba(222,1,100,0.1));
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: -1;
+    animation: moon-spin 2s linear infinite;
+}
+
+@keyframes moon-spin {
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+
+
+
+.checkerboard {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    pointer-events: none;
+    left:20ch;
+
+    background-color: white;
+background-image:
+        linear-gradient(
+            to right,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,1) 100%
+        ),
+        conic-gradient(
+            black 25%,
+            white 0 50%,
+            black 0 75%,
+            white 0
+        );
+    
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0.5;background-size: 1px 222px;
+    }
+    to {
+        opacity: 0.1;background-size: 150px 1px;
+    }
+}
+
+.checkerboard {
+    animation: fade 5s linear infinite alternate;
+}
+
+ .tedun {
+    bottom:-70px;
+    right:30px;
+    color:rgba(255,255,255,0.7);
+    text-shadow:10px 3px 3px black;
+    z-index:-1;
+    animation: tedun-spin 5s linear infinite;
+    position: fixed;
+
+}
+@keyframes tedun-spin  {
+  0% {
+    transform: translateX(0px) translateY(0px);
+    opacity:0.4;
+    mix-blend-mode:screen；
+    font-family: "USMCChuibolishu";
+    font-size:10vh;
+  }
+    25% {
+    transform: translateX(3px) translateY(3px);
+    text-shadow:10px 5px 3px black;
+    font-family: "Jigmo";
+    font-size:10.3vh;
+    filter: blur(0px);
+  }
+    50% {
+    transform: translateX(0px) translateY(0px);
+    opacity:0.7;
+    mix-blend-mode: difference;
+    font-family: "USMCChuibolishu";
+    font-size:10vh;
+    filter: blur(10px);
+  }
+   60% {
+    transform: translateX(-7px) translateY(-3px);
+    text-shadow:10px 5px 3px black;
+    font-family: "Jigmo";
+    font-size:10.3vh;
+    filter: blur(20px);
+  }
+   75% {
+    transform: translateX(-3px) translateY(-3px);
+    mix-blend-mode: multiply;
+    font-family: "Jigmo";
+    font-size:10.3vh;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+    opacity:0.4;
+    mix-blend-mode:screen；
+    font-family: "USMCChuibolishu";
+    font-size:10vh;
+    filter: blur(0px);
+  }
+}
+  
+  
+#tetes {
+  background-color:rgba(255,255,255,0.6);
+  radius:3px;
+  pointer-events: none;
+  border:1px dashed black;
+  position: fixed;
+  bottom: 10%;  
+  right:2%;
+  color: rgba(0,0,0,0.6);
+  text-shadow:1px 1px 3px black,1px 5px 5px white;
+  font-size: 20px;
+  z-index:0;
+  white-space: pre-line;
+}
+
+
+  
+  
 </style>
